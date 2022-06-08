@@ -25,9 +25,9 @@ const New = ({ categories, navigate }) => {
       url: "/products",
       data: newProduct,
     })
-      .then(() => {
+      .then((res) => {
         navigate("/products");
-        console.log("SUCCESFUL POST");
+        console.log("SUCCESFUL POST", res);
       })
       .catch((err) => {
         console.log("FAILED TO POST DATA");

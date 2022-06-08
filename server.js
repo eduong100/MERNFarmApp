@@ -48,7 +48,7 @@ app.get("/products/:id", async (req, res) => {
 app.post("/products", async (req, res) => {
   const product = new Product(req.body);
   await product.save();
-  res.redirect("/products");
+  res.send("Success!");
 });
 
 app.put("/products/:id", async (req, res) => {
