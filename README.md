@@ -40,7 +40,7 @@ The express app listens on port 5000 given that our react development server has
 
 ![MERN STACK OVERVIEW](./readme_resources/rest_chart.png)
 
-Thus, to get a specific Product (say it has id 75) we send a GET request to http://localhost:5000/products/75
+Thus, to get a specific Product (say it has id 75) we send a `GET` request to http://localhost:5000/products/75
 
 Several things on the server-side need to happen for smooth communication between the server and the front-end. First, our express app needs to be able to recognize when information sent is JSON therefore we call `app.use(express.json());` In case we may deal with urlencoded data in the future, we also call `app.use(express.urlencoded({ extended: true }));`. Lastly, we call `app.use(cors());` in order to relax securities and enable cross-origin sharing of resources (basically any local process can now access the server endpoints).
 
@@ -56,6 +56,6 @@ Routes on our front-end are handled by react-router. The router is responsible f
 
 <h2>How to Run:</h2>
 
-First step is to install all the dependencies. Make sure you have the LTS version of Node installed (and consequently the LTS version of npm). Install dependencies using $npm install in both the main project folder as well as the client folder (run this command where the package.json files are). This will install both the server and client dependencies respectively. Note that this webapp was developed in a WSL 2.0 environment. 
+First step is to install all the dependencies. Make sure you have the LTS version of Node installed (and consequently the LTS version of npm). Install dependencies using `$npm install` in both the main project folder as well as the client folder (run this command where the package.json files are). This will install both the server and client dependencies respectively. Note that this webapp was developed in a WSL 2.0 environment. 
 
 Next make sure you have mongoDB installed (use the following for more info on installation for WSL). You will need to use one terminal to run the mongo daemon, one terminal to run the express server, and one terminal to run the react app in development mode. The commands for each terminal respectively are `$sudo mongod –dbpath ~/data/db`, `$node server.js`, and `$npm start` (do npm start within client folder). Run the commands in the above order and the app should be ready to go.  Just navigate to http://localhost:3000/ in your browser (preferably chrome) and you are good to go.
