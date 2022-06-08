@@ -46,7 +46,7 @@ Several things on the server-side need to happen for smooth communication betwee
 
 <h2>Frontend:</h2>
 
-All frontend code is stored in the client folder. So far we only run the code in development mode (deployment will be saved for the future). Using npm start, our react app is hosted on http://localhost:3000/. 
+All frontend code is in REACT and stored in the client folder. So far we only run the code in development mode (deployment will be saved for the future). Using npm start, our react app is hosted on http://localhost:3000/. 
 
 For sending requests to the backend we use the Axios API. We set our proxy URL to the root of our backend server URL (i.e. http://localhost:5000) allowing us to make requests to express like so: axios.get(“/products/100002”, …). This allows us to avoid hardcoding URLs in the event our backend root changes. Axios expects a response from the server regardless of the HTTP request type meaning that our backend is coded to always give a response.
 
