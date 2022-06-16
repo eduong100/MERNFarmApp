@@ -4,7 +4,7 @@
 
 <h2>Backend:</h2>
 
-The react uses an express server and a MongoDB to set up a fully working REST API + database. Communcation between the two is handled via Mongoose. 
+We use an express server and MongoDB to set up a fully working REST API + database. Communcation between the two is handled via Mongoose. 
 We store and retrieve data according to the following mongoose schema: 
 ```
 const productSchema = new mongoose.Schema({
